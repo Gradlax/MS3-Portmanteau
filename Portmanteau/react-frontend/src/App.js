@@ -1,29 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import App from './App';
-import './index.css'
+import React from 'react';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { About, Footer, Header, Skills, Testimonial, Work } from './container';
+import { NavBar } from './components/';
+import './App.scss'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div className="app">
+    {/* Check capilization here ^ (a or A) */}
+    <NavBar />
+    <Header />
+    <About />
+    <Work />
+    <Skills />
+    <Testimonial />
+    <Footer />
+  </div>
+);
 
 export default App;
