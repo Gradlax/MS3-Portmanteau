@@ -5,7 +5,8 @@ import { NavBar } from './components/';
 import './App.scss'
 
 const App = () => (
-  <div className="app"> 
+  <div className="app">
+     {/* {} */}
     {/* Check capilization here ^ (a or A) */}
     <NavBar />
     <Header />
@@ -14,7 +15,7 @@ const App = () => (
     <Skills />
     <Testimonial />
     <Footer />
-  </div> 
+  </div>
 );
 
 export default App;

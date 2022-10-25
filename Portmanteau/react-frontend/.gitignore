@@ -5,10 +5,6 @@
 /.pnp
 .pnp.js
 
-#placeholder images that will be changed out 
-/assets
-
-
 # testing
 /coverage
 
