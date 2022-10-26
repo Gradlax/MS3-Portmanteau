@@ -3,28 +3,71 @@ import { motion } from 'framer-motion'
 
 import { images } from '../../constants'
 import './Header.scss'
-const Header = () => {
-  return (
-    <div className="app___header app___flex">
-      <motion.div 
-        whileInView={{ x: [-100, 0], opacity: [0, 1]}}
-        transition={{ duration: 0.5 }}
-        className="app___header-info">
-        <div className="app___header-badge">
-          <div className="badge-cmp app___flex">
-            <span>👋  </span>
-            <div style={{ marginLeft: 20}}>
-              <p className="p-text">Hello, I am</p>
-                <h1 className='head-text'>Aaron</h1>
-            </div>
+
+const scaleVariants = {
+  whileInView: {
+    scale: [0, 1],
+    opacity: [0, 1],
+    transition: {
+      duration: 1,
+      ease: 'easeInOut',
+    },
+  },
+};
+
+const Header = () => (
+  <div id='home' className="app__header app__flex">
+    <motion.div
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.5 }}
+      className="app__header-info"
+    >
+      <div className="app__header-badge">
+        <div className="badge-cmp app__flex">
+          <span>🔥</span>
+          <div style={{ marginLeft: 20 }}>
+            {/* Here is the greeting that will open with this one liner */}
+            <p className="p-text">Hi! I am</p>
+            <h1 className="head-text">Aaron</h1>
           </div>
-           </div>
-   ></motion.div> </div>
-  )
-}
+        </div>
 
-export default Header
+        <div className="tag-cmp app__flex">
+          {/* This is where we will put some about me one liners */}
+          <p className="p-text">Web Developer</p>
+          <p className="p-text">All Around Techie </p>
+          <p className="p-text">Freelance IT and Software Developer</p>
+        </div>
+      </div>
+    </motion.div>
 
+    <motion.div
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 0.5, delayChildren: 0.5 }}
+      className="app__header-img"
+    >
+      <img src={images.profile} alt="profile_bg" />
+      <motion.img
+        whileInView={{ scale: [0, 1] }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+        src={images.circle}
+        alt="profile_circle"
+        className="overlay_circle"
+      />
+    </motion.div>
 
+    <motion.div
+      variants={scaleVariants}
+      whileInView={scaleVariants.whileInView}
+      className="app__header-circles"
+    >
+      {[images.flutter, images.redux, images.sass].map((circle, index) => (
+        <div className="circle-cmp app__flex" key={`circle-${index}`}>
+          <img src={circle} alt="profile_bg" />
+        </div>
+      ))}
+    </motion.div>
+  </div>
+);
 
-// 1:08:38 
+export default Header;

@@ -1,0 +1,205 @@
+#home {
+    position: relative;
+    background: url(../../assets/bgIMG.png);
+    background-size: cover;
+    // Always do this for a background image
+    background-repeat: repeat;
+    background-position: center;
+
+    .app__wrapper {
+        padding: 0;
+    
+        .copyright {
+            display: none;
+        }
+    
+    }
+
+}
+
+.app__header {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    // This will allow the main section to take over the page 
+    flex-direction: row;
+    padding: 6rem 2rem 0;
+
+    @media screen and (min-width: 2000px){
+        padding-top: 8rem;
+    }
+
+    @media screen and (max-width: 1200px){
+        flex-direction: column;
+    }
+    @media screen and (max-width: 350px){
+        padding: 6rem 1rem 2rem;
+    }
+}
+
+.app__header-info {
+    flex: 0.60;
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: flex-start;
+
+    @media screen  and (max-width: 2000px) {
+        width: 100%;
+        margin-right: 0rem;
+    }
+}
+.app__header-badge {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    .badge-cmp, .tag-cmp {
+        padding: 1rem 2rem;
+            border: var(--white-color);
+            border-radius: 17px;
+            flex-direction: row;
+            width: auto;
+
+            box-shadow: 0 0 22px rgba(0, 0, 0, 0.1);
+    }
+
+    .tag-cmp {
+        flex-direction: column;
+        margin-top: 3rem;
+
+        p {
+
+            width: 100%;
+            text-transform: uppercase;
+            text-align: right;
+        }
+        
+
+
+    }
+
+    span {
+        font-size: 2.3rem;
+
+        @media  screen and (min-width: 2000px){
+            font-size: 4.5rem;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+}
+
+.app__header-circles {
+    display: flex;
+    flex: 0.65;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+    margin-left: 1rem;
+
+    div {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%; 
+        // To make a circle, use 50%
+
+        background: var(--white-color);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+// This is where we will use the icons to show what I am profecient in, come back here later
+        img {
+            height: 60%;
+            width: 60%;
+        }
+    }
+// Change the sizing to show which you are most profecient in ;)
+    div:nth-child(1) {
+        height: 100px;
+        width: 100px;
+    }
+    // First Circle
+    div:nth-child(2) {
+       margin: 1.75rem;
+       height: 150px;
+       width: 150px;
+    }
+    // Second Circle
+    div:nth-child(3) {
+        height: 100px;
+        width: 100px;
+    }
+    // Third Circle
+
+
+
+
+    // For Mobile Devices 
+    @media screen  and (min-width: 2000px){
+        div:nth-child(1) {
+            height: 400px;
+            width: 400px;
+        }
+        // First Circle
+        div:nth-child(2) {
+        //    margin: 1.75rem;
+           height: 165px;
+           width: 165px;
+        }
+        // Second Circle
+        div:nth-child(3) {
+            height: 200px;
+            width: 200px;
+        }
+        // Third Circle
+    }
+
+// For Large Screen and Ultrawide Users
+    @media screen  and (max-width: 1200px) {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-left: 0;
+        flex-direction: row;
+
+
+        div {
+            margin: 0.75rem;
+        }
+    }
+}
+
+.app__header-img {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+
+    img {
+        width: 100%;
+        z-index: 1;
+        object-fit: contain;
+    }
+
+    .overlay_circle {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+        height: 90%;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 1200px) {
+        margin: 2rem 0;
+    }
+}
