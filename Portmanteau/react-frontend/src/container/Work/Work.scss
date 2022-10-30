@@ -1,0 +1,135 @@
+.app__works {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+.app__works-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 4rem 0 1.7rem;
+
+    .app__works-filter-item {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        color: #000;
+        font-weight: 800;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 0.5rem;
+
+        &:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        @media screen and (min-width: 2000px) {
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+        }
+    }
+
+    .item-active {
+        background-color: var(--secondary-color);
+            color: #fff;
+    }
+
+}
+
+.app__work-portfolio {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    .app__work-item {
+        width: 290px;
+        flex-direction:column;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        background-color: #fff;
+        color: #000;
+    }
+
+    &:hover {
+        box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    }
+// This is for large screen suppport
+    @media screen and(min-width: 2000px) {
+        width: 460px;
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+    }
+// This is for small screen support 
+    @media screen and(max-width: 300px) {
+        width: 100%;
+        margin: 1rem
+    }
+}
+
+.app__work-img {
+    width: 100%;
+    position: relative;
+    height: 220px;
+    
+
+    img {
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5rem;
+        object-fit: cover;
+    }
+
+// Large Screen Support
+    @media screen and(min-width: 2000px) {
+        height: 325px;
+    }
+}
+
+.app__works-hover {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition: all 0.4s ease;
+    // This is for image color change on project image effects (.app__works-hover)
+
+    div {
+        // This is for the icons in the first project image
+        height: 50px;
+        width: 50px;
+        color: #fff;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,0.5);
+
+        margin: 1rem;
+        font-weight: 800;
+        font-family: var(--font-base);
+        cursor: pointer;
+        transition: all 0.4s ease;
+
+        svg {
+            height: 50%;
+            width: 50%;
+
+            color: var(--white-color);
+        }
+    }
+}
+
