@@ -1,10 +1,10 @@
-import { default as Navbar } from './NavBar/NavBar'
+
 import NavigationDots from './NavigationDots';
 import SocialMedia from './SocialMedia';
-import Navbar from './Navbar/Navbar';
+import NavBar from './NavBar/NavBar';
 
 export {
   NavigationDots,
   SocialMedia,
-  Navbar,
+  NavBar,
 };

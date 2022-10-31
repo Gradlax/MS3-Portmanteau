@@ -22,22 +22,20 @@ const Work = () => {
   }, []);
 
 
-
   const handleWorkFilter = (item) => {
-      setActiveFilter = (item);
-      setAnimateCard([{y:100, opacity: 0}]) 
-      // This will cause a shuffle animation
+    setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
 
-      setTimeout(() => {
-        setAnimateCard([{ y: 0, opacity: 1}]);
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
 
-        if (item === 'All') {
-          setFilterWork(works);
-        } else {
-          setFilterWork(works.filter((work) => work.tags.includes(item)));
-        }
-      }, 500);
-  }
+      if (item === 'All') {
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(item)));
+      }
+    }, 500);
+  };
     return (
     <>
       <h2 className="head-text">Here is My <span>Creative </span> <br /> //<span>//</span>Section</h2> 
@@ -114,7 +112,7 @@ const Work = () => {
 };
 
 export default AppWrap(
-MotionWrap(Work, 'app__works'),
-'work',
-'app__primarybg',
+  MotionWrap(Work, 'app__works'),
+  'work',
+  'app__primarybg',
 );

@@ -1,3 +1,7 @@
-export { default as AppWrap } from './AppWrap'
-export { default as NavigationDots } from './NavigationDots'
-export { default as SocialMedia } from './SocialMedia'
+import AppWrap from './AppWrap';
+import MotionWrap from './MotionWrap';
+
+export {
+  AppWrap,
+  MotionWrap,
+};

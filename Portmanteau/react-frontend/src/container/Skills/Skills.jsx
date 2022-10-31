@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react'
 
 import { motion } from 'framer-motion';
-import ReactToolTip from 'react-ReactToolTip'
-import { AppWrap } from '../../wrapper';
+import ReactTooltip from 'react-tooltip'
+import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 
 import './Skills.scss'
@@ -15,15 +15,14 @@ const Skills = () => {
     const query = '*[_type == "works"]';
     const skillsQuery = '*[_type == "skills"]';
   
-    client.fetch(query)
-    .then((data) => {
-     setExperience(data)
-    })
-    client.fetch(skillsQuery)
-    .then((data) => {
-     setSkills(data)
-    })
-      }, [])
+    client.fetch(query).then((data) => {
+      setExperiences(data);
+    });
+
+    client.fetch(skillsQuery).then((data) => {
+      setSkills(data);
+    });
+  }, []);
 
 
   return (
