@@ -1,7 +1,8 @@
 {
   "name": "react-frontend",
+  "homepage": ".",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
@@ -40,5 +41,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "localhost:3000",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#1a1a1a",
   "background_color": "#ffffff"
 }
