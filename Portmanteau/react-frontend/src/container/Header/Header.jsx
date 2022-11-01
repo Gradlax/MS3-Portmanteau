@@ -33,6 +33,7 @@ const Header = () => (
         </div>
 
         <div className="tag-cmp app__flex">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil iusto doloremque iure eaque eius, quidem et minus hic placeat labore nisi veritatis consectetur aliquid. Quaerat at voluptas rem aperiam eveniet.</p>
           <p className="p-text">Web Developer</p>
           <p className="p-text">Freelancer</p>
         </div>
@@ -59,7 +60,7 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.flutter, images.redux, images.sass].map((circle, index) => (
+      {[images.node, images.css, images.api, images.javascript, images.react, images.html, images.sass, images.git].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>
