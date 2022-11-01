@@ -1,8 +1,7 @@
 {
   "name": "react-frontend",
-  "homepage": ".",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
@@ -42,7 +41,6 @@
       "last 1 safari version"
     ]
   },
-  
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",

@@ -1,9 +1,9 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { motion } from 'framer-motion';
 
-import { AppWrap } from '../../wrapper'
-import { images } from '../../constants'
-import './Header.scss'
+import { AppWrap } from '../../wrapper';
+import { images } from '../../constants';
+import './Header.scss';
 
 const scaleVariants = {
   whileInView: {
@@ -17,7 +17,7 @@ const scaleVariants = {
 };
 
 const Header = () => (
-  <div id='home' className="app__header app__flex">
+  <div className="app__header app__flex">
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ duration: 0.5 }}
@@ -27,17 +27,14 @@ const Header = () => (
         <div className="badge-cmp app__flex">
           <span>🔥</span>
           <div style={{ marginLeft: 20 }}>
-            {/* Here is the greeting that will open with this one liner */}
-            <p className="p-text">Hi! I am</p>
-            <h1 className="head-text">Aaron</h1>
+            <p className="p-text">Hello! My name is</p>
+            <h1 className="head-text">Aaron Isaac Fisher</h1>
           </div>
         </div>
 
         <div className="tag-cmp app__flex">
-          {/* This is where we will put some about me one liners */}
           <p className="p-text">Web Developer</p>
-          <p className="p-text">All Around Techie </p>
-          <p className="p-text">Freelance IT and Software Developer</p>
+          <p className="p-text">Freelancer</p>
         </div>
       </div>
     </motion.div>

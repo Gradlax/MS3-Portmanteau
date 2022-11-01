@@ -1,11 +1,11 @@
 {
   "root": true,
+  "api": {
+    "projectId": "3w06ixzl",
+    "dataset": "production"
+  },
   "project": {
     "name": "Portmanteau"
-  },
-  "api": {
-    "projectId": "3134ubz1",
-    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",

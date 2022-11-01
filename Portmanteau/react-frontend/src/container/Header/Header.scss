@@ -2,7 +2,7 @@
     position: relative;
     background: url(../../assets/bgIMG.png);
     background-size: cover;
-    // Always do this for a background image
+    // Always do this for a background image;
     background-repeat: repeat;
     background-position: center;
 
@@ -21,7 +21,7 @@
     flex: 1;
     height: 100%;
     width: 100%;
-    // This will allow the main section to take over the page 
+    // This will allow the main section to take over the page;
     flex-direction: row;
     padding: 6rem 2rem 0;
 

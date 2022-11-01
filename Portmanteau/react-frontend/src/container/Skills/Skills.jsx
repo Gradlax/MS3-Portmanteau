@@ -24,7 +24,6 @@ const Skills = () => {
     });
   }, []);
 
-
   return (
     <>
       <h2 className="head-text">Skills/Experience</h2>
@@ -95,3 +94,4 @@ export default AppWrap(
   'skills',
   'app__whitebg',
   );
+  
